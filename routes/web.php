@@ -104,7 +104,7 @@ Route::middleware('auth')->group(function () {
     Route::get('setitng','Customer\SettingController@index')->name('customer.setting');
     Route::put('setitng/{id}','Customer\SettingController@settingUpdateCustomer')->name('customer.setting-update');
 
-    Route::get('add-order','Karyawan\PelayananController@addorders');
+    // Route::get('add-order','Karyawan\PelayananController@addorders');
     // Profile
     Route::get('me','Customer\ProfileController@index');
     Route::put('me/{id}','Customer\ProfileController@updateProfile');

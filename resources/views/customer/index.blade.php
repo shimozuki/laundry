@@ -75,7 +75,7 @@
                     Data Transaksi Kamu
                 </h4>
                 <h4 class="card-title">
-                    <a href="{{url('add-order')}}" class="btn btn-primary">Tambah</a>
+                    <a href="https://wa.me/6287861540874?tekt=Hai,%20Mau%20order%20tolong%20ambil%20Laundrian%20ke%20rumah%20ya" class="btn btn-primary">Whatapp</a>
                 </h4>
                 <div class="table-responsive m-t-0">
                     <table id="myTable" class="table display table-bordered table-striped">
