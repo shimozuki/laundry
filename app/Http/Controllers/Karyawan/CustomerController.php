@@ -50,7 +50,7 @@ class CustomerController extends Controller
 
 
         $phone_number = preg_replace('/^0/','62',$request->no_telp);
-        $password = str::random(8);
+        // $password = 'password';
 
         $addCustomer = User::create([
           'karyawan_id' => Auth::id(),
@@ -60,7 +60,7 @@ class CustomerController extends Controller
           'status'      => 'Active',
           'no_telp'     => $phone_number,
           'alamat'      => $request->alamat,
-          'password'    => Hash::make($password)
+          'password'    => Hash::make($phone_number)
         ]);
 
         $addCustomer->assignRole($addCustomer->auth);
@@ -70,7 +70,7 @@ class CustomerController extends Controller
           $data = array(
               'name'            => $addCustomer->name,
               'email'           => $addCustomer->email,
-              'password'        => $password,
+              'password'        => $phone_number,
               'url_login'       => url('/login'),
               'nama_laundry'    => Auth::user()->nama_cabang,
               'alamat_laundry'  => Auth::user()->alamat_cabang,

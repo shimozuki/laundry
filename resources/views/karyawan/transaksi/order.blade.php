@@ -31,6 +31,7 @@
                         <th>Jenis</th>
                         <th>Total</th>
                         <th>Action</th>
+                        <th>Hubungi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,6 +78,9 @@
                                 <a href="{{url('invoice-kar', $item->id)}}" class="btn btn-sm btn-warning" style="color:white">Invoice</a>
                               @endif
                             @endif
+                        </td>
+                        <td>
+                        <a href="https://wa.me/{{$item->no_tlpn}}?tekt=Hai,%20Mau%20menginformasikan%20bahwa%20laundri%20sedang%20{{$item->status_order}}" class="btn btn-sm btn-success" style="color:white">Whatsapp</a>
                         </td>
                     </tr>
                     <?php $no++; ?>

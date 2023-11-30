@@ -23,7 +23,8 @@ class PelayananController extends Controller
     public function index()
     {
       $order = transaksi::with('price')->where('user_id',Auth::user()->id)
-      ->orderBy('id','DESC')->get();
+      ->leftJoin('users', 'transaksis.customer_id', '=', 'users.id')
+      ->orderBy('users.id','DESC')->get();
       return view('karyawan.transaksi.order', compact('order'));
     }
 
